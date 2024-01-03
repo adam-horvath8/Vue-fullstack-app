@@ -24,7 +24,7 @@ watchEffect(async () => {
 
 <template>
   <div class="container-fluid row h-100 justify-content-between">
-    <div class="card col-5 p-0 m-4 align-self-center">
+    <div class="card col-md-5 p-0 align-self-center ">
       <h5 class="card-header bg-primary text-white">{{ post?.title }}</h5>
       <div class="card-body">
         <p class="card-text">{{ post?.postText }}</p>
@@ -33,7 +33,7 @@ watchEffect(async () => {
         </p>
       </div>
     </div>
-    <div class="col-5 m-4 ">
+    <div class="col-md-5 ">
       <CommentInput />
       <div class="d-flex flex-column gap-2">
          <div v-for="comment in comments" :key="comment.id" class="card ">

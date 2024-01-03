@@ -6,6 +6,8 @@ import PostCard from "../components/PostCard.vue";
 
 let posts = ref<postsType>([]);
 
+
+
 onMounted(async () => {
   posts.value = await getPosts();
   console.log(posts.value);

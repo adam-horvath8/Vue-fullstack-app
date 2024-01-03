@@ -1,15 +1,14 @@
-
+import axios from "axios";
 
 const getPosts = async () => {
   try {
-    const response = await fetch("http://localhost:3004/posts");
-    const data = await response.json();
+    const response = await axios("http://localhost:3004/posts");
+    const data = response.data;
     return data;
   } catch (err) {
     console.error(err);
-    return []; 
+    return [];
   }
 };
 
 export default getPosts;
-
