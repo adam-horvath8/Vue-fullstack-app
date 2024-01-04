@@ -1,8 +1,13 @@
 export type postsType = postType[];
 
 export type postType = {
-  id: number;
+  id?: number;
   title: string;
   postText: string;
   username: string;
+};
+
+export type newPostFormType = {
+  title: string;
+  postText: string;
 };

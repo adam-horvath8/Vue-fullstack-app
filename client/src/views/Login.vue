@@ -19,7 +19,8 @@ const handleSubmit = async () => {
       console.log(res.data.error);
     } else {
       localStorage.setItem("accessToken", res.data);
-      authStore.login;
+      authStore.login();
+      authStore.updateUser(data.username)
       console.log(authStore.authState);
       router.push({ name: "Home" });
     }
@@ -32,6 +33,7 @@ const handleSubmit = async () => {
 <template>
   <div class="container">
     <div class="row justify-content-center">
+      <h1 class="display-3 text-center">Login</h1>
       <form @submit.prevent="handleSubmit" class="col-10 col-sm-6 col-lg-4">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>

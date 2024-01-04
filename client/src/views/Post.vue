@@ -34,7 +34,7 @@ watchEffect(async () => {
       </div>
     </div>
     <div class="col-md-5 ">
-      <CommentInput />
+      <CommentInput :comments="comments"/>
       <div class="d-flex flex-column gap-2">
          <div v-for="comment in comments" :key="comment.id" class="card ">
         <div class="card-body d-flex justify-content-between">
